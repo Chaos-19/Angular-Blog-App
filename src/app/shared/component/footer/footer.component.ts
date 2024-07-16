@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-hero',
+  selector: 'app-footer',
   standalone: true,
   imports: [],
-  templateUrl: './hero.component.html',
+  templateUrl: './footer.component.html',
   styles: ``
 })
-export class HeroComponent {
+export class FooterComponent {
 
 }
