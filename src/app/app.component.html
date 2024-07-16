@@ -1,10 +1,10 @@
-<main class="w-screen h-screen flex overflow-hidden">
-  <div class="flex-1 w-full h-full grow ">
+<main class="w-screen  h-screen flex justify-center overflow-y-scroll">
+  <div class="flex-1 w-full container h-full grow">
     <header class="w-full">
       <app-nav-bar />
-      <app-home></app-home>
     </header>
     <section class="w-full">
+      <router-outlet></router-outlet>
     </section>
   </div>
 </main>
