@@ -1,7 +1,7 @@
 <header class="w-full px-3">
   <nav class="w-full md:flex justify-between items-center p-1 py-5 border-b-[1.3px] border-blue-700">
     <div class="w-full md:w-max flex justify-between items-center">
-      <a href="/">
+      <a [routerLink]="['/']">
         <h1 class="text-xl font-serif capitalize">
           {{ brand }}
         </h1>
@@ -26,13 +26,13 @@
           >
           <a
             class="text-lg font-medium capitalize"
-            [href]="navLinks[0].pathUrl"
+            [routerLink]="navLinks[0].pathUrl"
             >
             {{navLinks[0].pathName}}
           </a>
         </li>
         <li>
-          <a [href]="navLinks[1].pathUrl"
+          <a [routerLink]="navLinks[1].pathUrl"
             ><ng-icon
               name="octSearch"
               class="text-2xl"

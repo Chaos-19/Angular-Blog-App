@@ -3,6 +3,7 @@ import { CommonModule } from "@angular/common"
 
 import { HeroComponent } from "./hero/hero.component"
 import { BlogListComponent } from "../blog/blog-list/blog-list.component"
+//import { BlogComponent } from "../blog/blog.component"
 
 import { blogs } from "../../constants"
 

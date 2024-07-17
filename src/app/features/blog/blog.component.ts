@@ -1,5 +1,7 @@
 import { Component } from "@angular/core"
 import { CommonModule } from "@angular/common"
+import { RouterModule, RouterLink } from "@angular/router"
+
 import { BlogListComponent } from "./blog-list/blog-list.component"
 import { blogs } from "../../constants"
 
