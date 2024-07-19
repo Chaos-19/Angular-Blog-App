@@ -19,10 +19,10 @@
                         "polyfills": ["zone.js"],
                         "tsConfig": "tsconfig.app.json",
                         "assets": [
+                            "src/assets",
                             {
                                 "glob": "**/*",
-                                "input": "public",
-                                
+                                "input": "public"
                             }
                         ],
                         "styles": [
@@ -34,18 +34,52 @@
                         ],
                         "scripts": [
                             "node_modules/prismjs/prism.js",
-                            "node_modules/prismjs/components/prism-csharp.min.js",
                             "node_modules/prismjs/components/prism-typescript.min.js",
                             "node_modules/prismjs/components/prism-javascript.min.js",
+                            "node_modules/prismjs/components/prism-jsx.min.js",
+                            "node_modules/prismjs/components/prism-tsx.min.js",
                             "node_modules/prismjs/components/prism-css.min.js",
-                            "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.js"
-                            /*
+                            "node_modules/prismjs/components/prism-json.min.js",
+                            "node_modules/prismjs/components/prism-json5.min.js",
+                            "node_modules/prismjs/components/prism-bash.min.js",
+                            "node_modules/prismjs/components/prism-markdown.min.js",
+                            "node_modules/prismjs/components/prism-scss.min.js",
+                            "node_modules/prismjs/components/prism-sass.min.js",
+                            "node_modules/prismjs/components/prism-yaml.min.js",
+                            "node_modules/prismjs/components/prism-docker.min.js",
+                            "node_modules/prismjs/components/prism-git.min.js",
+                            "node_modules/prismjs/components/prism-http.min.js",
+                            "node_modules/prismjs/components/prism-nginx.min.js",
+                            "node_modules/prismjs/components/prism-graphql.min.js",
+                            "node_modules/prismjs/components/prism-sql.min.js",
+                            "node_modules/prismjs/components/prism-csv.min.js",
+                            "node_modules/prismjs/components/prism-python.min.js",
+                            "node_modules/prismjs/components/prism-java.min.js",
+                            "node_modules/prismjs/components/prism-ruby.min.js",
+                            "node_modules/prismjs/components/prism-go.min.js",
+                            "node_modules/prismjs/components/prism-rust.min.js",
+                            "node_modules/prismjs/components/prism-csharp.min.js",
+                            "node_modules/prismjs/components/prism-shell-session.min.js",
+                            "node_modules/prismjs/components/prism-powershell.min.js",
+                            "node_modules/prismjs/components/prism-diff.min.js",
+                            "node_modules/prismjs/components/prism-regex.min.js",
+                            "node_modules/prismjs/components/prism-toml.min.js",
+                            "node_modules/prismjs/components/prism-ini.min.js",
+                            "node_modules/prismjs/components/prism-kotlin.min.js",
+                            "node_modules/prismjs/components/prism-swift.min.js",
+                            "node_modules/prismjs/components/prism-lua.min.js",
+                            "node_modules/prismjs/components/prism-perl.min.js",
+                            "node_modules/prismjs/components/prism-mongodb.min.js",
+                            "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.js",
+                            "node_modules/mermaid/dist/mermaid.min.js",
+                            "node_modules/prismjs/plugins/line-highlight/prism-line-highlight.js",
+                            "node_modules/clipboard/dist/clipboard.min.js",
                             "node_modules/emoji-toolkit/lib/js/joypixels.min.js",
                             "node_modules/katex/dist/katex.min.js",
-                            "node_modules/katex/dist/contrib/auto-render.min.js",
-                            "node_modules/mermaid/dist/mermaid.min.js",
-                            "node_modules/clipboard/dist/clipboard.min.js"
-                            /* "node_modules/prismjs/plugins/line-highlight/prism-line-highlight.js"*/
+                            "node_modules/katex/dist/contrib/auto-render.min.js"
+                            /*
+                             
+                            */
                         ]
                     },
                     "configurations": {

@@ -1,5 +1,6 @@
-import { Component, inject } from "@angular/core"
+import { Component, inject, OnInit } from "@angular/core"
 import { ActivatedRoute } from "@angular/router"
+import { NgIconComponent, provideIcons } from "@ng-icons/core"
 import {
     MARKED_OPTIONS,
     MarkdownModule,
@@ -8,72 +9,69 @@ import {
     MarkedRenderer,
     MermaidAPI
 } from "ngx-markdown"
+import { HttpClientModule, HttpClient } from "@angular/common/http"
+import { heroChevronLeft, heroChevronUp } from "@ng-icons/heroicons/outline"
+import { octRss, octMarkGithub, octMail } from "@ng-icons/octicons"
+import { faBrandSquareTwitter, faBrandLinkedin } from "@ng-icons/font-awesome/brands"
+
+import { blogs, links } from "../../../constants"
 
 @Component({
     selector: "app-blog-detail",
     standalone: true,
-    imports: [MarkdownModule],
+    imports: [MarkdownModule, NgIconComponent, HttpClientModule],
+    viewProviders: [
+        provideIcons({
+            heroChevronLeft,
+            heroChevronUp,
+            octRss,
+            octMarkGithub,
+            octMail,
+            faBrandSquareTwitter,
+            faBrandLinkedin
+        })
+    ],
     templateUrl: "./blog-detail.component.html",
     styles: ``
 })
-export class BlogDetailComponent {
+export class BlogDetailComponent implements OnInit {
     route: ActivatedRoute = inject(ActivatedRoute)
     slug = ""
-    postContent = `## Markdown __rulez__! 
----
-### Syntax highlight 
-TypeScript code snippet using syntax highlight 
-\`\`\`typescript 
-const language = 'typescript'; 
-\`\`\`
-\`\`\`javascript 
-import './polyfills';
-import { enableProdMode } from '@angular/core'; 
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppModule } from './app/app.module';
-platformBrowserDynamic().bootstrapModule(AppModule).then(ref => { 
-// Ensure Angular destroys itself on hot reloads. 
-if (window['ngRef']) { 
-window['ngRef'].destroy(); 
-} 
-window['ngRef'] = ref;
-// Otherwise, log the boot error 
-}).catch(err => console.error(err)); 
+    postContent: any
+    icons = [faBrandSquareTwitter, octMail]
+    socialLinks = links
+        .map((v, i) => ({
+            ...v,
+            icon: this.icons[i]
+        }))
+        .slice(0, 2)
 
-\`\`\` 
-\`\`\`css 
-.variable-binding, 
-.variable-textarea { 
-width: 49%; 
-}
-.variable-textarea { 
-min-height: 420px; 
-padding: 8px; 
-}
-.variable-binding {
-display: block; 
-float: right; 
-} 
-\`\`\` 
-\`\`\`html 
-<h5> 
-angular@{{ angularVersion }} | ngx-markdown@{{ ngxMarkdownVersion }} 
-</h5> 
-<br>
-<div markdown ngPreserveWhitespaces>{{ markdown }}</div> 
-<!-- <div markdown [data]="markdown"></div> --> 
+    blogpost: (typeof blogs)[number]
 
-\`\`\` 
-
-### Lists 
-1. Ordered list 
-2. Another bullet point 
-- Unordered list 
-- Another unordered bullet point
-### Blockquote 
-> Blockquote to the max!!!`
-
-    constructor() {
+    constructor(private http: HttpClient) {
         this.slug = this.route.snapshot.params["slug"]
+        this.blogpost = blogs[blogs.findIndex(v => v.slug == this.slug)]
+    }
+
+    async ngOnInit() {
+        try {
+            this.postContent = await this.http
+                .get(`/assets/blogs/write-your-own-json-parser.md`, {
+                    responseType: "text"
+                })
+                .toPromise()
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    trackByUrl(index: number, item: any): string {
+        return item.url
+    }
+
+    formate(): string {
+        return this.postContent?.split("---")[2]
+    }
+    formateDate(strDate: string): Date {
+        return new Date(strDate)
     }
 }

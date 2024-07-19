@@ -1,7 +1,7 @@
 export const navLinks = [
     {
         pathName: "posts",
-        pathUrl: "/blogs"
+        pathUrl: "/blog"
     },
     {
         pathName: "search",
@@ -98,5 +98,20 @@ export const blogs = [
         tags: ["javascript", "design patterns"],
         description:
             "Employ design patterns to structure your Javascript code effectively and promote maintainability."
+    }
+]
+
+export const links = [
+    {
+        url: "https://github.com/Chaos-19"
+    },
+    {
+        url: "https://www.linkedin.com/in/kalkidan-getachew-bab252230"
+    },
+    {
+        url: "mailto:kalgetachew375@gmail.com?subject=feedback"
+    },
+    {
+        url: "http://www.twitter.com"
     }
 ]

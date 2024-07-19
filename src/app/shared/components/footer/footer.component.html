@@ -1,1 +1,11 @@
-<p>footer works!</p>
+<div class="py-5 border-t-2 border-t-blue-700 flex items-center justify-between ">
+  <h4 class="">Enjoy</h4>
+
+  <div class="flex items-center gap-5 py-2">
+    @for(icon of socialLinks; track trackByUrl){
+    <a [href]="icon.url">
+      <ng-icon [svg]="icon.icon" class="text-3xl"></ng-icon>
+    </a>
+    }
+  </div>
+</div>

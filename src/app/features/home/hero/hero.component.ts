@@ -3,7 +3,7 @@ import { CommonModule } from "@angular/common"
 import { NgIconComponent, provideIcons } from "@ng-icons/core"
 import { octRss, octMarkGithub, octMail } from "@ng-icons/octicons"
 import { faBrandSquareTwitter, faBrandLinkedin } from "@ng-icons/font-awesome/brands"
-import { heroParagraph } from "../../../constants"
+import { heroParagraph, links } from "../../../constants"
 
 @Component({
     selector: "app-hero",
@@ -18,25 +18,11 @@ import { heroParagraph } from "../../../constants"
 export class HeroComponent {
     title = "kal"
     heroText = heroParagraph
-
-    socialLinks = [
-        {
-            icon: octMarkGithub,
-            url: "/chaos-19"
-        },
-        {
-            icon: faBrandLinkedin,
-            url: "/linkin"
-        },
-        {
-            icon: octMail,
-            url: "mailto:kalgetachew375@gmail.com?subject=feedback"
-        },
-        {
-            icon: faBrandSquareTwitter,
-            url: "/twitter"
-        }
-    ]
+    icons = [octMarkGithub, faBrandLinkedin, octMail, faBrandSquareTwitter]
+    socialLinks = links.map((v, i) => ({
+        ...v,
+        icon: this.icons[i]
+    }))
 
     trackByUrl(index: number, item: any): string {
         return item.url

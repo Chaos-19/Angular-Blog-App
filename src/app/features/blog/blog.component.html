@@ -1,22 +1,22 @@
 <section class="w-full pt-5 divide-y-2 divide-blue-700">
   <div class="py-5">
+    <div class="flex items-center gap-2 py-2">
+      <a class="" [routerLink]="['/']">
+        Home
+      </a>
+      <ng-icon name="heroChevronDoubleRight"></ng-icon>
+      <a class="" [routerLink]="['/blog']">
+        Blog
+      </a>
+    </div>
     <h2 class="text-[24px] font-bold tracking-normal text-neutral-700 capitalize my-5">
       Featured
     </h2>
+    <p>
+      All the articles I've posted.
+    </p>
     <div class="py-5 flex flex-col gap-4">
       @for( blog of blogList.slice(0,6);track blog.slug){
-      <app-blog-list
-        [blogpost]="blog"
-        ></app-blog-list>
-      }
-    </div>
-  </div>
-  <div class="">
-    <h2 class="text-[24px] font-semibold tracking-normal text-neutral-700 capitalize my-5">
-      latest Post
-    </h2>
-    <div class="py-5 flex flex-col gap-3">
-      @for( blog of blogList.slice(5);track blog.slug){
       <app-blog-list
         [blogpost]="blog"
         ></app-blog-list>
