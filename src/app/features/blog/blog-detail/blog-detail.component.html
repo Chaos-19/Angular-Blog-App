@@ -1,19 +1,22 @@
 <section class="w-full py-5">
-  <div class="flex items-center gap-2">
-    <ng-icon name="heroChevronLeft"></ng-icon>
-    <p>
-      Go back
-    </p>
-  </div>
-  <h2 class="">{{ blogpost.title }}</h2>
-  <div class="flex items-center gap-3">
-    <ng-icon name="heroCalendarDays" class="text-2xl text-gray-800"></ng-icon>
-    <p class="text-gray-600 text-[16px] italic">
-      {{ formateDate(blogpost.pubDatetime) | date }}
-    </p>
+  <div class="py-8">
+    <a (click)="goBack()" class="flex items-center gap-2">
+      <ng-icon name="heroChevronLeft"></ng-icon>
+      <p>
+        Go back
+      </p>
+    </a>
+    <h2 class="text-2xl font-mono font-semibold text-blue-700 py-1.5">{{ blogpost.title }}</h2>
+    <div class="flex items-center gap-3">
+      <ng-icon name="heroCalendarDays" class="text-2xl text-gray-800"></ng-icon>
+      <p class="text-gray-600 text-[16px] italic">
+        {{ formateDate(blogpost.pubDatetime) | date }}
+      </p>
+    </div>
+
   </div>
   <markdown class="prose" [data]="formate()"></markdown>
-  <div class="flex items-center justify-between">
+  <div class="flex items-center justify-between my-3">
     <div class="">
       <p>
         Share this post on:
@@ -27,8 +30,11 @@
       </div>
     </div>
 
-    <div class="self-end place-self-end flex items-center gap-1.5">
-      <ng-icon name="heroChevronUp"></ng-icon> Back to Top
+    <div class="place-self-end flex items-end gap-1.5">
+      <ng-icon name="heroChevronUp"></ng-icon>
+      <p class="">
+        Back to Top
+      </p>
     </div>
   </div>
 </section>
