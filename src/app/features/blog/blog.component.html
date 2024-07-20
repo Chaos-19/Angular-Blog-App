@@ -17,7 +17,7 @@
     </p>
     <div class="py-2 flex items-center gap-5 flex-wrap w-lg">
       @for(tag of allTags; track tag){
-      <a class="text-lg font-medium underline decoration-dashed decoration-black text-gray-600">
+      <a [routerLink]="['/']" class="text-lg font-medium underline decoration-dashed decoration-black text-gray-600">
         # {{ tag }}
       </a>
       }
