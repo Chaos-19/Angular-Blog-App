@@ -6,7 +6,7 @@
         Featured
       </h2>
       <div class="py-5 flex flex-col gap-4">
-        @for( blog of blogList.slice(0,6);track blog.slug){
+        @for( blog of blogList.slice(0,3);track blog.slug){
         <app-blog-list
           [blogpost]="blog"
           ></app-blog-list>
@@ -18,7 +18,7 @@
         latest Post
       </h2>
       <div class="py-5 flex flex-col gap-3">
-        @for( blog of blogList.slice(5);track blog.slug){
+        @for( blog of blogList.slice(5,8);track blog.slug){
         <app-blog-list
           [blogpost]="blog"
           ></app-blog-list>

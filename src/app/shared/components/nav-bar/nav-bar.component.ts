@@ -1,8 +1,9 @@
-import { Component, onInit } from "@angular/core"
+import { Component, OnInit } from "@angular/core"
 import { CommonModule } from "@angular/common"
 import { RouterLink } from "@angular/router"
 import { NgIconComponent, provideIcons } from "@ng-icons/core"
 import { octSearch, octSun, octThreeBars, octMoon } from "@ng-icons/octicons"
+
 import { navLinks as menus } from "../../../constants"
 import { ThemeService } from "../../../core/service/theme/theme.service"
 @Component({
@@ -13,16 +14,16 @@ import { ThemeService } from "../../../core/service/theme/theme.service"
     templateUrl: "./nav-bar.component.html",
     styles: ``
 })
-export class NavBarComponent implements onInit {
+export class NavBarComponent implements OnInit {
     brand = "kalkidan getachew"
     isNavbarOpen = false
     navLinks = menus
-    theme: "light" | "dark"
+    theme: "light" | "dark" = "light"
 
     constructor(private themeService: ThemeService) {}
-    
+
     ngOnInit() {
-        this.theme = this.themeService.currentTheme()
+        this.theme = this.themeService.currentTheme
     }
     toggleNavBar() {
         this.isNavbarOpen = !this.isNavbarOpen
@@ -30,5 +31,6 @@ export class NavBarComponent implements onInit {
 
     toggleDarkMode() {
         this.themeService.toggleTheme()
+         this.theme = this.themeService.currentTheme
     }
 }

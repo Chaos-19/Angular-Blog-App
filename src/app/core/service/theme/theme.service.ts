@@ -29,6 +29,5 @@ export class ThemeService {
     private applyTheme() {
         // Apply theme styles based on this.theme
         document.body.classList.toggle("dark", this.theme === "dark")
-        // You can also use this.theme to apply styles to specific elements // Example: document.querySelector('#my-element').classList.toggle('dark', this.theme === 'dark');
     }
 }

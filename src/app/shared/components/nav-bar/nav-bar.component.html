@@ -40,10 +40,19 @@
             ></a>
         </li>
         <li (click)="toggleDarkMode()">
-          <ng-icon
-            [svg]="{theme == 'light'?octSun : octMoon}"
-            class="text-2xl"
-            ></ng-icon>
+          <span  [ngClass]="theme == 'light'? 'hidden':'block'">
+            <ng-icon
+              name="octMoon"
+              class="text-2xl"
+              ></ng-icon>
+          </span>
+          <span  [ngClass]="theme == 'light'?'block':'hidden'">
+            <ng-icon
+              name="octSun"
+              class="text-2xl"
+              ></ng-icon>
+          </span>
+
         </li>
       </ul>
     </div>
