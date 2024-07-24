@@ -17,14 +17,14 @@
   <markdown class="prose dark:prose-invert" [data]="formate()"></markdown>
   <div class="flex flex-col md:flex-row justify-center items-center md:justify-between my-5 gap-1.5">
     <div class="flex md:block flex-col gap-2">
-      <p class="text-foreground">
+      <p class="text-foreground text-base py-1">
         Share this post on:
       </p>
       <div class="flex items-center justify-center md:justify-normal gap-5 py-2">
         @for(icon of socialLinks; track trackByUrl){
-        <a [href]="icon.url">
+        <button [shareButton]="icon.share">
           <ng-icon [svg]="icon.icon" class="text-3xl text-foreground"></ng-icon>
-        </a>
+        </button>
         }
       </div>
     </div>

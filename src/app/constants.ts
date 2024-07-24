@@ -19,6 +19,7 @@ export const heroParagraph = [
 ]
 
 export const blogs = [
+    /*
     {
         pubDatetime: "2022-07-03",
         title: "You can actually mutate imports in Javascript",
@@ -26,7 +27,7 @@ export const blogs = [
         tags: ["javascript"],
         description:
             "Do you know you can actually mutate an imported object in JS? Today, we will see how to mutate and avoid mutation for imported objects."
-    },
+    },*/
     {
         pubDatetime: "2023-07-03",
         title: "Exploring the world of functional programming in Javascript",
@@ -103,15 +104,19 @@ export const blogs = [
 
 export const links = [
     {
-        url: "https://github.com/Chaos-19"
+        url: "https://github.com/Chaos-19",
+        share: "github"
     },
     {
-        url: "https://www.linkedin.com/in/kalkidan-getachew-bab252230"
+        url: "https://www.linkedin.com/in/kalkidan-getachew-bab252230",
+        share: "linkedin"
     },
     {
-        url: "mailto:kalgetachew375@gmail.com?subject=feedback"
+        url: "mailto:kalgetachew375@gmail.com?subject=feedback",
+        share: "email"
     },
     {
-        url: "http://www.twitter.com"
+        url: "http://www.twitter.com",
+        share: "x"
     }
 ]

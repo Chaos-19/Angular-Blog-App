@@ -2,6 +2,8 @@ import { Component, inject, OnInit } from "@angular/core"
 import { ActivatedRoute, RouterLink } from "@angular/router"
 import { CommonModule, Location } from "@angular/common"
 import { NgIconComponent, provideIcons } from "@ng-icons/core"
+import { ShareButtonDirective } from "ngx-sharebuttons"
+
 import {
     MARKED_OPTIONS,
     MarkdownModule,
@@ -20,7 +22,13 @@ import { blogs, links } from "../../../constants"
 @Component({
     selector: "app-blog-detail",
     standalone: true,
-    imports: [CommonModule, MarkdownModule, NgIconComponent, HttpClientModule],
+    imports: [
+        CommonModule,
+        MarkdownModule,
+        NgIconComponent,
+        HttpClientModule,
+        ShareButtonDirective
+    ],
     viewProviders: [
         provideIcons({
             heroChevronLeft,
