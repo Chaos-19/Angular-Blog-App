@@ -61,7 +61,7 @@ export class BlogDetailComponent implements OnInit {
     async ngOnInit() {
         try {
             this.postContent = await this.http
-                .get(`/assets/blogs/als-with-examples.md`, {
+                .get(`/assets/${this.slug}.md`, {
                     responseType: "text"
                 })
                 .toPromise()
@@ -74,7 +74,7 @@ export class BlogDetailComponent implements OnInit {
     }
 
     formate(): string {
-        return this.postContent?.split("---")[2]
+        return this.postContent?.split("Blog Post:**")[1]
     }
     formateDate(strDate: string): Date {
         return new Date(strDate)

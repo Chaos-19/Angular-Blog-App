@@ -14,8 +14,8 @@ export const navLinks = [
 ]
 
 export const heroParagraph = [
-    "I am a software engineer based in Istanbul. I am currently working at Upstash.",
-    `This website is my brain dump, where I stuff everything I can think of, mostly about JavaScript, TypeScript, and web technologies. Recently, a bit of Rust.`
+    "I'm a final-year computer science student at Debre Tabor University, passionate about crafting seamless web experiences. As a full-stack developer, I dive into both frontend and backend realms, wielding tools like React, Node.js, TypeScript, Python, Next.js, and occasionally Flask.",
+    `This website is my creative corner, a place where I document my journey, share insights, and explore the fascinating world of web development. Join me as I navigate through the latest in technology, coding projects, and beyond!`
 ]
 
 export const blogs = [

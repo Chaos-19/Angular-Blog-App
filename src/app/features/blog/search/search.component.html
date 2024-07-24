@@ -15,12 +15,20 @@
     <p class="text-secondary-foreground">
       Search any article ...
     </p>
-
   </div>
   <div class="relative mb-6">
     <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
       <ng-icon name="octSearch" class="text-xl dark:text-foreground"></ng-icon>
     </div>
-    <input type="search" class="bg-input border border-border text-foreground text-sm rounded focus:ring-ring focus:border-primary block w-full ps-10 p-2.5 py-4 placeholder:text-muted-foreground placeholder:text-lg" placeholder="Search for anything...">
+    <input (input)="onInputChange($event)" type="text" class="bg-input border border-border text-foreground text-sm rounded focus:ring-ring focus:border-primary block w-full ps-10 p-2.5 py-4 placeholder:text-muted-foreground placeholder:text-lg" placeholder="Search for anything...">
+  </div>
+  <div class="my-4">
+    <div class="py-5 flex flex-col gap-4">
+      @for( blog of blogList; track blog.slug){
+      <app-blog-list
+        [blogpost]="blog"
+        ></app-blog-list>
+      }
+    </div>
   </div>
 </div>
