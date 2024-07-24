@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "my-blog-app": {
+        "Angular-Blog-App": {
             "projectType": "application",
             "schematics": {},
             "root": "",
@@ -13,7 +13,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:application",
                     "options": {
-                        "outputPath": "dist/my-blog-app",
+                        "outputPath": "dist/Angular-Blog-App",
                         "index": "src/index.html",
                         "browser": "src/main.ts",
                         "polyfills": ["zone.js"],
@@ -87,13 +87,13 @@
                             "budgets": [
                                 {
                                     "type": "initial",
-                                    "maximumWarning": "500kB",
-                                    "maximumError": "1MB"
+                                    "maximumWarning": "2MB",
+                                    "maximumError": "5MB"
                                 },
                                 {
                                     "type": "anyComponentStyle",
-                                    "maximumWarning": "2kB",
-                                    "maximumError": "4kB"
+                                    "maximumWarning": "2MB",
+                                    "maximumError": "5MB"
                                 }
                             ],
                             "outputHashing": "all"
@@ -110,10 +110,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "buildTarget": "my-blog-app:build:production"
+                            "buildTarget": "Angular-Blog-App:build:production"
                         },
                         "development": {
-                            "buildTarget": "my-blog-app:build:development"
+                            "buildTarget": "Angular-Blog-App:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -135,6 +135,9 @@
                         "styles": ["src/styles.css"],
                         "scripts": []
                     }
+                },
+                "deploy": {
+                  "builder": "angular-cli-ghpages:deploy"
                 }
             }
         }
