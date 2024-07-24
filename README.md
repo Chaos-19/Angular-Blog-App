@@ -48,7 +48,7 @@ the project is the final project I completed during a two-week Angular study to 
 2. Open your browser and navigate to `http://localhost:4200`.
 
 ## Folder Structure
-
+```
 angular-18-blog-app/
 ├── src/
 │   ├── app/
@@ -93,7 +93,7 @@ angular-18-blog-app/
 ├── angular.json
 ├── package.json
 ├── README.md
-
+```
 ## Contributing
 
 1. Fork the repository.
