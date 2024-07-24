@@ -1,27 +1,112 @@
-# MyBlogApp
+# Angular 18 Blog App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+This is a blog application built using Angular 18. It features a homepage with a list of blog posts, a separate page for individual blog posts, and a search functionality. The app supports dark mode and is fully mobile responsive.
 
-## Development server
+the project is the final project I completed during a two-week Angular study to land an internship. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **Homepage**: Displays a list of blog posts.
+- **Individual Blog Post Page**: Dedicated page for each blog post.
+- **Search Page**: Allows users to search for blog posts.
+- **Dark Mode**: Toggle between light and dark themes.
+- **Mobile Responsive**: Fully responsive design for an optimal experience on mobile devices.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Screenshots
 
-## Build
+*Include screenshots of your app here.*
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Tech stack Used
 
-## Running unit tests
+- **Frontend**: Angular 18
+- **Styling**: tailwindcss 
+- **Routing**: Angular Router
+- **State Management**: not used
+- **Dark Mode**: CSS custom properties (or Angular Material theming)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Installation
 
-## Running end-to-end tests
+1. Clone the repository:
+   ```sh
+   https://github.com/Chaos-19/Angular-Blog-App.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd angular-18-blog-app
+   ```
+3. Install the dependencies:
+   ```sh
+   npm install
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Usage
 
-## Further help
+1. Start the development server:
+   ```sh
+   ng serve
+   ```
+2. Open your browser and navigate to `http://localhost:4200`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Folder Structure
+
+angular-18-blog-app/
+├── src/
+│   ├── app/
+│   │   ├── core/
+│   │   │   ├── service/
+│   │   │   │   ├── blog/
+│   │   │   │   ├── theme/
+│   │   ├── features/
+│   │   │   ├── blog/
+│   │   │   │   ├── add-blog/
+│   │   │   │   ├── blog-detail/
+│   │   │   │   ├── blog-list/
+│   │   │   │   ├── edite-blog/
+│   │   │   │   ├── search/
+│   │   │   │   ├── blog.component.html
+│   │   │   │   ├── blog.component.spec.ts
+│   │   │   │   ├── blog.component.ts
+│   │   │   ├── home/
+│   │   │   │   ├── hero/
+│   │   │   │   ├── home.component.html
+│   │   │   │   ├── home.component.spec.ts
+│   │   │   │   ├── home.component.ts
+│   ├── shared/
+│   │   ├── components/
+│   │   │   ├── 404/
+│   │   │   ├── footer/
+│   │   │   ├── load-animation/
+│   │   │   ├── nav-bar/
+│   │   ├── templates/
+│   │   │   ├── blog-template/
+│   ├── app.component.css
+│   ├── app.component.html
+│   ├── app.component.spec.ts
+│   ├── app.component.ts
+│   ├── app.config.ts
+│   ├── app.routes.ts
+│   ├── constants.ts
+│   ├── assets/
+│   ├── index.html
+│   ├── main.ts
+│   ├── styles.css
+├── angular.json
+├── package.json
+├── README.md
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For any questions or suggestions, please reach out to [kalgetachew375@gmail.com].
