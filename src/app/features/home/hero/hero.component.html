@@ -1,5 +1,5 @@
 <section class="w-full">
-  <div class="w-full pt-10 pb-5 border-b border-b-blue-700">
+  <div class="w-full pt-10 pb-5 border-b-2 border-b-primary">
     <h2 class="text-3xl text-foreground font-mono font-bold">
       Hey,I'm {{ title }} <ng-icon
         name="octRss"
@@ -20,7 +20,7 @@
       <div class="flex items-center gap-5 py-2">
         <div *ngFor="let icon of socialLinks; trackBy: trackByUrl">
           <a [href]="icon.url">
-            <ng-icon [svg]="icon.icon" class="text-3xl"></ng-icon>
+            <ng-icon [svg]="icon.icon" class="text-3xl text-foreground"></ng-icon>
           </a>
         </div>
       </div>

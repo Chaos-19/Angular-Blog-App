@@ -1,37 +1,36 @@
 <section class="w-full py-5">
-  <div class="py-8">
-    <a (click)="goBack()" class="flex items-center gap-2">
-      <ng-icon name="heroChevronLeft"></ng-icon>
+  <div class="py-8 flex flex-col gap-2">
+    <a (click)="goBack()" class="flex items-center gap-2 text-muted-foreground">
+      <ng-icon name="heroChevronLeft" class="text-foreground"></ng-icon>
       <p>
         Go back
       </p>
     </a>
-    <h2 class="text-2xl font-mono font-semibold text-blue-700 py-1.5">{{ blogpost.title }}</h2>
+    <h2 class="text-2xl font-mono font-semibold text-primary py-1.5">{{ blogpost.title }}</h2>
     <div class="flex items-center gap-3">
-      <ng-icon name="heroCalendarDays" class="text-2xl text-gray-800"></ng-icon>
-      <p class="text-gray-600 text-[16px] italic">
+      <ng-icon name="heroCalendarDays" class="text-2xl text-muted-foreground"></ng-icon>
+      <p class="text-muted-foreground text-[16px] italic">
         {{ formateDate(blogpost.pubDatetime) | date }}
       </p>
     </div>
-
   </div>
-  <markdown class="prose" [data]="formate()"></markdown>
-  <div class="flex items-center justify-between my-3">
-    <div class="">
-      <p>
+  <markdown class="prose dark:prose-invert" [data]="formate()"></markdown>
+  <div class="flex flex-col md:flex-row justify-center items-center md:justify-between my-5 gap-1.5">
+    <div class="flex md:block flex-col gap-2">
+      <p class="text-foreground">
         Share this post on:
       </p>
-      <div class="flex items-center gap-5 py-2">
+      <div class="flex items-center justify-center md:justify-normal gap-5 py-2">
         @for(icon of socialLinks; track trackByUrl){
         <a [href]="icon.url">
-          <ng-icon [svg]="icon.icon" class="text-3xl"></ng-icon>
+          <ng-icon [svg]="icon.icon" class="text-3xl text-foreground"></ng-icon>
         </a>
         }
       </div>
     </div>
 
-    <button class="place-self-end flex items-end gap-1.5">
-      <ng-icon name="heroChevronUp"></ng-icon>
+    <button class="md:place-self-end text-foreground flex flex-col md:flex-row items-center justify-center md:justify-normal md:items-end gap-1.5">
+      <ng-icon name="heroChevronUp" class="text-foreground"></ng-icon>
       <p class="">
         Back to Top
       </p>

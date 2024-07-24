@@ -41,7 +41,70 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      /*typography(theme) {
+        return {
+          dark: {
+            css: {
+              color: theme('colors.foreground'),
+              '[class~="lead"]': {
+                color: theme('colors.muted-foreground'),
+              },
+              a: {
+                color: theme('colors.primary-foreground'),
+              },
+              strong: {
+                color: theme('colors.primary-foreground'),
+              },
+              'ul > li::before': {
+                backgroundColor: theme('colors.primary'),
+              },
+              hr: {
+                borderColor: theme('colors.border'),
+              },
+              blockquote: {
+                color: theme('colors.foreground'),
+                borderLeftColor: theme('colors.border'),
+              },
+              h1: {
+                color: theme('colors.foreground'),
+              },
+              h2: {
+                color: theme('colors.foreground'),
+              },
+              h3: {
+                color: theme('colors.foreground'),
+              },
+              h4: {
+                color: theme('colors.foreground'),
+              },
+              code: {
+                color: theme('colors.foreground'),
+              },
+              'a code': {
+                color: theme('colors.primary-foreground'),
+              },
+              pre: {
+                color: theme('colors.muted-foreground'),
+                backgroundColor: theme('colors.background'),
+              },
+              thead: {
+                color: theme('colors.foreground'),
+                borderBottomColor: theme('colors.border'),
+              },
+              'tbody tr': {
+                borderBottomColor: theme('colors.border'),
+              },
+            },
+          },
+        };
+      },*/
     },
+  },
+
+  variants: {
+    extend: {
+      typography: ["dark"]
+    }
   },
   plugins: [
     require('@tailwindcss/typography'),

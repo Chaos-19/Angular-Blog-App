@@ -61,7 +61,7 @@ export class BlogDetailComponent implements OnInit {
     async ngOnInit() {
         try {
             this.postContent = await this.http
-                .get(`/assets/blogs/write-your-own-json-parser.md`, {
+                .get(`/assets/blogs/als-with-examples.md`, {
                     responseType: "text"
                 })
                 .toPromise()

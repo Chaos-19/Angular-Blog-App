@@ -1,9 +1,9 @@
-<div class="w-full py-5 border-t-2 border-t-border blue-700 flex items-center justify-between ">
-  <h4 class="text-foreground">Enjoy!</h4>
-  <div class="flex items-center gap-5 py-2">
+<div class="w-full py-5 border-t-2 border-t-primary flex flex-col md:flex-row justify-center md:justify-between items-center gap-3">
+  <h4 class="text-foreground order-2 md:order-none">Enjoy!</h4>
+  <div class="flex items-center gap-5 py-2 order-1 order-none">
     @for(icon of socialLinks; track trackByUrl){
     <a [href]="icon.url">
-      <ng-icon [svg]="icon.icon" class="text-3xl"></ng-icon>
+      <ng-icon [svg]="icon.icon" class="text-3xl text-foreground"></ng-icon>
     </a>
     }
   </div>
