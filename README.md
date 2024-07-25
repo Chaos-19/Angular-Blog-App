@@ -22,7 +22,7 @@ the project is the final project I completed during a two-week Angular study to 
 - **Styling**: tailwindcss 
 - **Routing**: Angular Router
 - **State Management**: not used
-- **Dark Mode**: CSS custom properties (or Angular Material theming)
+- **Dark Mode**: CSS custom variable
 
 ## Installation
 
