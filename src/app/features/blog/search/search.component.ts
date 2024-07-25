@@ -24,7 +24,9 @@ export class SearchComponent {
         const inputElement = event.target as HTMLInputElement
         this.inputValue = inputElement.value
         if (this.inputValue !== "")
-            this.blogList = blogs.filter(blog => blog.title.includes(this.inputValue))
+            this.blogList = blogs.filter(blog =>
+                blog.title.toLowerCase().includes(this.inputValue.toLowerCase())
+            )
         else this.blogList = []
     }
 }
