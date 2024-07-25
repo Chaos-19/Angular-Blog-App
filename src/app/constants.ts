@@ -19,14 +19,14 @@ export const heroParagraph = [
 ]
 
 export const blogs = [
-    {
+    /*    {
         pubDatetime: "2022-07-03",
         title: "You can actually mutate imports in Javascript",
         slug: "mutable-imports",
         tags: ["javascript"],
         description:
             "Do you know you can actually mutate an imported object in JS? Today, we will see how to mutate and avoid mutation for imported objects."
-    },
+    },*/
     {
         pubDatetime: "2023-07-03",
         title: "Exploring the world of functional programming in Javascript",
