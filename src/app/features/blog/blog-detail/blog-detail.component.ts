@@ -22,13 +22,7 @@ import { blogs, links } from "../../../constants"
 @Component({
     selector: "app-blog-detail",
     standalone: true,
-    imports: [
-        CommonModule,
-        MarkdownModule,
-        NgIconComponent,
-        HttpClientModule,
-        ShareButtonDirective
-    ],
+    imports: [CommonModule, MarkdownModule, NgIconComponent, HttpClientModule, ShareButtonDirective],
     viewProviders: [
         provideIcons({
             heroChevronLeft,
