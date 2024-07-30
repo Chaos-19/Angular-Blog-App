@@ -30,7 +30,7 @@ export const routes: Routes = [
                 title: "Blog Post page"
             },
             {
-                path: "blog/add/",
+                path: "blog/post/add",
                 component: AddBlogComponent,
                 title: "Add Blog Post page"
             },

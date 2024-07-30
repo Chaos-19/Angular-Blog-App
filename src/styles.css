@@ -69,4 +69,10 @@
     app-blog-template {
         @apply flex-1 h-full;
     }
+    .form-label{
+        @apply flex flex-col gap-2 text-base font-semibold capitalize text-foreground;
+    }
+    .form-input{
+        @apply border border-border p-2 py-3 rounded bg-input text-foreground;
+    }
 }
