@@ -1,20 +1,55 @@
 <div class="w-full h-full flex justify-center items-center">
-    <form action="" class="w-full flex flex-col gap-2 pt-3" [formGroup]="addForm">
-        <label for="title" class=""class="form-label">
-            Post title:
-            <input type="text" formControlName="title" placeholder="Blog Title" class="form-input">
-        </label>
-        <label for="description"class="form-label">
-            post description
-            <input type="text" formControlName="description" placeholder="Blog Description" class="form-input">
-        </label> 
-        <label for="content" class="form-label">
-            post content
-            <textarea formControlName="content" placeholder="Blog Content" id="" rows="10" class="form-input "></textarea>
-        </label>
-        <label for="tags"class="form-label">
-            post tags
-            <input type="text" formControlName="tags" placeholder="Blog Tags" class="form-input">
-        </label>
-    </form>
+  <form class="w-full flex flex-col gap-2 pt-3" [formGroup]="addPostForm" (submit)="this.submitBlog()">
+    <label for="title" class="" class="form-label">
+      Post title:
+      <input
+        type="text"
+        formControlName="title"
+        placeholder="Blog Title"
+        class="form-input"
+      />
+    </label>
+    <label for="description" class="form-label">
+      post description
+      <input
+        type="text"
+        formControlName="description"
+        placeholder="Blog Description"
+        class="form-input"
+      />
+    </label>
+    <label for="content" class="form-label">
+      post content
+      <textarea
+        formControlName="content"
+        placeholder="Blog Content"
+        id=""
+        rows="10"
+        class="form-input"
+      ></textarea>
+    </label>
+    <label for="tags" class="form-label">
+      post tags
+      <input
+        type="text"
+        formControlName="tags"
+        placeholder="Blog Tags"
+        class="form-input"
+      />
+    </label>
+    <div class="flex items-center gap-10 my-10">
+      <button
+        type="submit"
+        class="p-3 px-4 text-base rounded-xl text-primary-foreground bg-primary"
+      >
+        Add Post
+      </button>
+      <button
+        
+        class="p-3 px-4 text-base rounded-xl text-destructive-foreground bg-destructive"
+      >
+        cancel
+      </button>
+    </div>
+  </form>
 </div>

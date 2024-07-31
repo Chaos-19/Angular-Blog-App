@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core"
 import { blogs } from "../../../constants"
-import { HttpClientModule, HttpClient } from "@angular/common/http"
+import {  HttpClient } from "@angular/common/http"
 
 @Injectable({
     providedIn: "root"
@@ -45,5 +45,12 @@ export class BlogService {
             (prev: string[], current:string) => (prev.includes(current) ? prev : [current, ...prev]),
             []
         )
+    }
+
+    async submitPost(blog: typeof blogs[number]){
+       console.log("blog");
+       console.log(blog);
+
+       this.blogList.push(blog)
     }
 }
