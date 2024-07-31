@@ -1,6 +1,7 @@
-import { Component } from "@angular/core"
-import {Location} from "@angular/common"
+import { Component, inject } from "@angular/core"
 import { RouterLink } from "@angular/router"
+import { NavigationService } from "../../../../core/service/navigation/navigation.service"
+
 @Component({
     selector: "app-not-found",
     standalone: true,
@@ -8,9 +9,12 @@ import { RouterLink } from "@angular/router"
     templateUrl: "./not-found.component.html",
     styles: ``
 })
+
 export class NotFoundComponent {
-    constructor(private location: Location) {}
+
+    navigation = inject(NavigationService)
+
     goBack() {
-        this.location.back()
+        this.navigation.goBack()
     }
 }

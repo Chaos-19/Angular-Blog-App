@@ -20,7 +20,7 @@ export class BlogService {
     }
 
     async getBlogBySlug(slug: string): Promise<(typeof blogs)[number]> {
-        return this.blogList[this.blogList.findIndex(v => v.slug == slug)]
+        return this.blogList[this.blogList.findIndex(v => v.slug === slug)]
     }
 
     async getBlogDetail(slug: string): Promise<string> {
