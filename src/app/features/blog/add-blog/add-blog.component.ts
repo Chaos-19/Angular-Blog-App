@@ -18,4 +18,8 @@ export class AddBlogComponent {
      tags: new FormControl("")
   })
 
+  submitBlog(){
+
+  }
+
 }

@@ -5,6 +5,7 @@ import { RouterLink } from "@angular/router"
 import { NgIconComponent, provideIcons } from "@ng-icons/core"
 import { heroCalendarDays, heroChevronDoubleRight } from "@ng-icons/heroicons/outline"
 
+
 @Component({
     selector: "app-blog-list",
     standalone: true,
@@ -21,8 +22,12 @@ export class BlogListComponent {
         tags: string[]
         description: string
     }
-
     allTags = []
+
+
+    constructor(){
+     
+    }
 
     formateDate(strDate: string): Date {
         return new Date(strDate)

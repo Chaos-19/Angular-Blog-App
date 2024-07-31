@@ -6,15 +6,15 @@
         Go back
       </p>
     </a>
-    <h2 class="text-2xl font-mono font-semibold text-primary py-1.5">{{ blogpost.title }}</h2>
+    <h2 class="text-2xl font-mono font-semibold text-primary py-1.5">{{ blogpost?.title }}</h2>
     <div class="flex items-center gap-3">
       <ng-icon name="heroCalendarDays" class="text-2xl text-muted-foreground"></ng-icon>
       <p class="text-muted-foreground text-[16px] italic">
-        {{ formateDate(blogpost.pubDatetime) | date }}
+        {{ formateDate(blogpost?.pubDatetime) | date }}
       </p>
     </div>
   </div>
-  <markdown class="prose dark:prose-invert" [data]="formate()"></markdown>
+  <markdown class="prose dark:prose-invert" [data]="postContent"></markdown>
   <div class="flex flex-col md:flex-row justify-center items-center md:justify-between my-5 gap-1.5">
     <div class="flex md:block flex-col gap-2">
       <p class="text-foreground text-base py-1">

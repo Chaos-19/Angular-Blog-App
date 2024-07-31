@@ -5,6 +5,7 @@ import { HttpClientModule, HttpClient } from "@angular/common/http"
 @Injectable({
     providedIn: "root"
 })
+
 export class BlogService {
     private blogList = blogs
 
@@ -24,15 +25,25 @@ export class BlogService {
 
     async getBlogDetail(slug: string): Promise<string> {
         try {
+
             const content = await this.http
                 .get(`/assets/${slug}.md`, {
                     responseType: "text"
                 })
                 .toPromise()
-            alert(content)
+           
             return content as string
         } catch (error) {
             return ""
         }
+    }
+
+    async getAllPostTags():Promise<string[]>{
+        return blogs
+        .reduce((prev: string[], blog: (typeof blogs)[number]) => [...blog.tags, ...prev], [])
+        .reduce(
+            (prev: string[], current:string) => (prev.includes(current) ? prev : [current, ...prev]),
+            []
+        )
     }
 }
